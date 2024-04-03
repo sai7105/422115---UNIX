@@ -1,0 +1,38 @@
+//main.c
+#include <stdio.h>
+#include "head.h"
+
+void main() {
+    int num=12;
+    printf("Nth lucas number: %d\n", lucas(num));
+    printf("Nth fibanocci number: %d\n", fib(num)); 
+}
+
+//fib.c
+//n'th Fibanocci number  
+#include <stdio.h> 
+int fib(int n)  
+{
+    if (n == 0)  
+        return 0;  
+    if (n == 1)  
+        return 1;
+    return fib(n - 1) + fib(n - 2);  
+}
+
+//lucas.c
+//n'th Lucas number  
+#include <stdio.h> 
+int lucas(int n)  
+{
+    if (n == 0)  
+        return 2;  
+    if (n == 1)  
+        return 1;
+    return lucas(n - 1) + lucas(n - 2);  
+}
+
+
+//head.h
+int fib(int n);
+int lucas(int n);
